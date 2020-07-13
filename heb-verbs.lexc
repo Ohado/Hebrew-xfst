@@ -1,0 +1,92 @@
+! א=A ב=b ג=g ד=d ה=h ו=w ז=z ח=x ט=v י=y כ=k ל=l מ=m נ=n ס=s ע=E פ=p צ=c ק=q ר=r ש=j ת=t !
+! Binyanim numbers: פעל=1, נפעל=2, הפעיל=3, הופעל=4, פיעל=5, פועל=6, התפעל=7 !
+! Tense Numbers: 1 = Past, 2 = Present, 3 = Future
+
+Multichar_Symbols 
+	+bld1 +bld2 +bld3 +bld4 +bld5 +bld6 +bld7 !Binyanim
+	+Pst +Pres +Fut +inf	+1p +2p +3p !tense
+	+Mas +Fem +Sg +Pl		!Gender & number
+	@U.PEL.o@	@U.PEL.a@	@U.PEL.e@
+	^[ ^]
+
+LEXICON Verbs
+		Binyanim;
+
+LEXICON Binyanim
+<%+PEL : %+PEL>		Bld1S;
+
+LEXICON Bld1S
+^[		Bld1; 
+
+LEXICON Bld1
+{lbj}@U.PEL.a@		Mright1;	!wear	!שלם
+{Axl}@U.PEL.a@		Mright1;	!eat	!נפא
+{npl}@U.PEL.o@		Mright1;	!fall	!חפנ
+{ptx}@U.PEL.a@		Mright1;	!open
+{jmE}@U.PEL.a@		Mright1;	!listen
+{Amr}@U.PEL.a@		Mright1;	!say
+{njx}@U.PEL.o@		Mright1;	!bite
+{mcA}@U.PEL.a@		Mright1;	!find	!נלא
+{pgj}@U.PEL.o@		Mright1;	!meet	
+
+!***********Vowels not fully supported:**************
+{yjb}@U.PEL.e@		Mright1;	!sit	!נפוי
+{jyr}@U.PEL.a@		Mright1;	!sing	!נעוי
+{rAh}@U.PEL.e@		Mright1;	!see	!נליה
+!**********************************
+
+LEXICON Mright1
+.m%>.{		Tense1;
+
+LEXICON Tense1			!since I am inside the merge, I have to use special one-character marks for tenses
+<%+Pst : 1>		Past1;
+<%+Pres : 2>	Present1;
+<%+Fut : 3>		Future1;
+
+LEXICON Past1
++1P+Mas+Sg:KCaTCaLCti		Close;
++2P+Mas+Sg:KCaTCaLCta		Close;
++3P+Mas+Sg:KCaTCaLC			Close;
++1P+Fem+Sg:KCaTCaLCti		Close;
++2P+Fem+Sg:KCaTCaLCt		Close;
++3P+Fem+Sg:KCaTCLCa			Close;
+
++1P+Mas+Pl:KCaTCaLCnu		Close;
++2P+Mas+Pl:KCaTCaLCtem		Close;
++3P+Mas+Pl:KCaTCLCu			Close;
++1P+Fem+Pl:KCaTCaLCnu		Close;
++2P+Fem+Pl:KCaTCaLCten		Close;
++3P+Fem+Pl:KCaTCLCu			Close;
+
+LEXICON Present1
++Mas+Sg:KCoTCeLC			Close;
++Fem+Sg:KCoTCeLCet			Close;
++Mas+Pl:KCoTCLCim			Close;
++Fem+Pl:KCoTCLCot			Close;
+
+LEXICON Future1
++1P+Mas+Sg:eKCTCVLC					Mleft1; !+1P+Mas+Sg:eKCTCoLC@U.PEL.o@		Close;
++2P+Mas+Sg:tiKCTCVLC				Mleft1; !+2P+Mas+Sg:tiKCTCoLC@U.PEL.o@		Mleft;
++3P+Mas+Sg:yiKCTCVLC				Mleft1; !+3P+Mas+Sg:yiKCTCoLC@U.PEL.o@		Mleft;
++1P+Fem+Sg:eKCTCVLC					Mleft1; !+1P+Fem+Sg:eKCTCoLC@U.PEL.o@		Mleft;
++2P+Fem+Sg:tiKCTCeLCi				Close;
++3P+Fem+Sg:tiKCTCVLC				Mleft1;! +3P+Fem+Sg:tiKCTCoLC@U.PEL.o@		Mleft;
+
++1P+Mas+Pl:niKCTCVLC				Mleft1; !+1P+Mas+Pl:niKCTCoLC@U.PEL.o@		Mleft;
++2P+Mas+Pl:tiKCTCeLCu				Close;
++3P+Mas+Pl:yiKCTCeLCu				Close;
++1P+Fem+Pl:niKCTCVLC				Mleft1;! +1P+Fem+Pl:niKCTCoLC@U.PEL.o@		Mleft;
++2P+Fem+Pl:tiKCTCeLCu				Close;
++3P+Fem+Pl:tiKCTCVLCna				Mleft1; !+3P+Fem+Pl:tiKCTCoLCna@U.PEL.o@	Mleft;
+
+
+LEXICON Mleft1
+}.%<m.{				Vs;
+
+LEXICON Vs
+a@U.PEL.a@			Close;
+o@U.PEL.o@			Close;
+e@U.PEL.e@			Close;
+
+LEXICON Close
+}^]		#;

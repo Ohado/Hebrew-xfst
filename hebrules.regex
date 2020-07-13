@@ -1,0 +1,50 @@
+!שלמים: no rules are required, luckily
+
+!חפנ: in PEL: Eliminates the n in future tense
+K n -> 0 || %+PEL 3 ?* _
+.o.
+
+!נפא: elimination of A & change of vowel to o in future tense
+vowel K A -> o || %+PEL 3 ?* _
+.o.
+
+!נפיו: elimination of y & change of adjacent vowel in future tense.
+!		Chage of second vowel to e in fut tense except in root {yjn}
+!vowel -> e || %+PEL 3 ?* _ K y|w
+!.o.
+K y -> 0 || %+PEL 3 ?* _
+.o.
+K w -> 0 || %+PEL 3 ?* _
+.o.
+
+!נעוי: elimination of y & w, fixing of reduplication of vowels
+!e -> 0 || %+PEL 2 ?* T y _
+!.o.
+!e t -> a || %+PEL 2 ?* T y L ? _
+!.o.
+!o T y|w -> a || %+PEL 2 ?* _
+!.o.
+!a a -> a
+!.o.
+!vowel -> a || %+PEL 3 ?* _ K ? T y
+!.o.
+!e -> i || %PEL 3 ?* K ? _ T y
+!.o.
+!T y|w -> 0 || %+PEL ?* _
+!.o.
+
+!נלא
+
+!נליה
+
+!mid-vowel elimination when 2-letters roots occur in PEL, except Pres-Fem-Sg
+vowel -> 0 || %+PEL \2 ?* vowel T ? _ L ? vowel
+.o.
+
+
+!elimination of markings
+%+PEL | 1 | 2 | 3 |K | T | L -> 0 .o.
+
+!trial & error
+
+?*;

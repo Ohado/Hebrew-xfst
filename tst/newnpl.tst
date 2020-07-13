@@ -1,0 +1,13 @@
+napalti
+napalta
+napalt
+napal
+napla
+naplu
+nopel
+nopelet
+epol
+tipol
+tipli
+tiplu
+yipol

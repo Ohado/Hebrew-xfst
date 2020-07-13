@@ -1,0 +1,21 @@
+!source hebrew/heb1.xfst
+clear stack
+
+define vowel a | e | i | o | u;
+read regex < hebrew/hebrules.regex
+read lexc < Hebrew/heb-verbs.lexc
+
+list C A b g d h w z x v y k l m n s E p c q r j t
+list V e a i o u;
+compile-replace lower
+compose net
+
+echo ******Good words:*******
+up < Hebrew/tst/good.tst
+echo ******Bad words:*******
+up < Hebrew/tst/bad.tst
+echo ******Random Words:******
+print random-lower
+print random-lower
+
+echo please type: down < Hebrew/tst/XXX.tst to test a root

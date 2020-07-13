@@ -1,0 +1,17 @@
+tilbaji
+tilboji
+oxel
+oxalti
+tinpli
+tinpeli
+tinpali
+tinpoli
+potexim
+tiAmar
+tiAmor
+toAmar
+macaAa
+yimceA
+pogjet
+pogejt
+tipgaj
